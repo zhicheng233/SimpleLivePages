@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>志成的直播间喵~</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dplayer@1/dist/DPlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/dplayer@1/dist/DPlayer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flv.js/1.6.2/flv.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        #background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://api.imlazy.ink/img') no-repeat center center fixed;
+            background-size: cover;
+            filter: blur(5px); /* 模糊效果 */
+        }
+
+        #dplayer-container {
+            width: 75%; /* 播放器宽度 */
+            height: calc(75% * 10 / 16); /* 16:10 aspect ratio */
+            margin: 30px auto; /* 初始居中 */
+            background: rgba(0, 0, 0, 0.5); 
+            border-radius: 10px;
+        }
+
+        #bar {
+            width: 75%;
+            height: 22px;
+            margin: 0px auto; /* 初始居中 */
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex; /* 使用 flex 布局 */
+            justify-content: center; /* 水平居中 */
+            align-items: center; /* 垂直居中 */
+            position: relative;
+            transform: translateY(-120%);
+        }
+
+        #bottom-bar {
+            bottom: 0;
+            left: 50%;
+           
+        }
+    </style>
+</head>
+<body>
+    <div id="background"></div>
+    <div id="dplayer-container"></div>
+    <div id="bar">
+
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0,0,256,256 "style="margin-right: 5px;">
+            <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(4,4)"><path d="M32,6c-14.359,0 -26,11.641 -26,26c0,12.277 8.512,22.56 19.955,25.286c-0.592,-0.141 -1.179,-0.299 -1.755,-0.479v-5.957c0,0 -0.975,0.325 -2.275,0.325c-3.637,0 -5.148,-3.245 -5.525,-4.875c-0.229,-0.993 -0.827,-1.934 -1.469,-2.509c-0.767,-0.684 -1.126,-0.686 -1.131,-0.92c-0.01,-0.491 0.658,-0.471 0.975,-0.471c1.625,0 2.857,1.729 3.429,2.623c1.417,2.207 2.938,2.577 3.721,2.577c0.975,0 1.817,-0.146 2.397,-0.426c0.268,-1.888 1.108,-3.57 2.478,-4.774c-6.097,-1.219 -10.4,-4.716 -10.4,-10.4c0,-2.928 1.175,-5.619 3.133,-7.792c-0.2,-0.567 -0.533,-1.714 -0.533,-3.583c0,-1.235 0.086,-2.751 0.65,-4.225c0,0 3.708,0.026 7.205,3.338c1.614,-0.47 3.341,-0.738 5.145,-0.738c1.804,0 3.531,0.268 5.145,0.738c3.497,-3.312 7.205,-3.338 7.205,-3.338c0.567,1.474 0.65,2.99 0.65,4.225c0,2.015 -0.268,3.19 -0.432,3.697c1.898,2.153 3.032,4.802 3.032,7.678c0,5.684 -4.303,9.181 -10.4,10.4c1.628,1.43 2.6,3.513 2.6,5.85v8.557c-0.576,0.181 -1.162,0.338 -1.755,0.479c11.443,-2.726 19.955,-13.009 19.955,-25.286c0,-14.359 -11.641,-26 -26,-26zM33.813,57.93c-0.599,0.042 -1.203,0.07 -1.813,0.07c0.61,0 1.213,-0.029 1.813,-0.07zM37.786,57.346c-1.164,0.265 -2.357,0.451 -3.575,0.554c1.218,-0.103 2.411,-0.29 3.575,-0.554zM32,58c-0.61,0 -1.214,-0.028 -1.813,-0.07c0.6,0.041 1.203,0.07 1.813,0.07zM29.788,57.9c-1.217,-0.103 -2.411,-0.289 -3.574,-0.554c1.164,0.264 2.357,0.451 3.574,0.554z"></path></g></g>
+        </svg>
+        <a href="https://api.imlazy.ink/#/" id="bottom-bar" style="margin-right: 5px; display: flex; align-items: center;">
+            <img src="https://img.shields.io/badge/%E8%83%8C%E6%99%AF-%E9%9B%AB_API-_"></img>
+        </a>
+        <a href="https://github.com/zhicheng233/simplelivepages" id="bottom-bar" style="margin-right: 5px; display: flex; align-items: center;">
+            <img src="https://img.shields.io/badge/ThisPages-v1.0-pink"></img>
+        </a>
+        <a href="https://github.com/DIYgod/DPlayer" id="bottom-bar" style="margin-right: 5px; display: flex; align-items: center;">
+            <img src="https://img.shields.io/github/v/release/DIYgod/DPlayer?label=Dplayer"></img>
+        </a>
+        
+        <a href="https://github.com/Bilibili/flv.js/" id="bottom-bar" style="margin-right: 5px; display: flex; align-items: center;">
+            <img src="https://img.shields.io/github/v/release/Bilibili/flv.js?label=Flv.js&color=green"></img>
+        </a>
+        <a href="https://github.com/q191201771/lal" id="bottom-bar" style="margin-right: 5px; display: flex; align-items: center;">
+            <img src="https://img.shields.io/github/v/release/q191201771/lal?label=Lal&color=yellow
+            "></img>
+        </a>
+        
+    </div>
+
+    <script>
+        let isFullScreenWeb = false; // 跟踪全屏状态
+
+        const dp = new DPlayer({
+            container: document.getElementById('dplayer-container'),
+            live: true,
+            video: {
+                url: 'http://zhicheng233.freeddns.org:7001/live/movie.flv',
+                type: 'flv', 
+               
+            },
+            
+
+
+            theme: '#FF69B4', // 粉色
+            autoplay: true, 
+        });
+        
+        // 播放器大小变化事件
+        dp.on('resize', () => {
+            if (isFullScreenWeb) {
+                // 网页全屏
+                dp.container.style.margin = '70px auto';
+                //dp.notice("退出网页全屏", "2000");
+                isFullScreenWeb = false;
+        
+            } else {
+                // 网页全屏退出
+                dp.container.style.margin = '0';
+                isFullScreenWeb = true;
+            
+            }
+            console.log(isFullScreenWeb);
+        });
+    </script>
+</body>
+</html>
